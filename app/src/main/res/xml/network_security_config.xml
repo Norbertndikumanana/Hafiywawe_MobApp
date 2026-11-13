@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The HAFIYAWE dev server runs on plain HTTP (http://10.0.2.2:3001 for the emulator,
+  or your computer's LAN IP for a real phone). Android blocks cleartext by default,
+  so it is allowed here for this marketplace client. In production point the app at
+  an https:// origin and cleartext is never used.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
